@@ -52,16 +52,6 @@ road_damage_project/
 │   └── labels/                 # YOLO-format annotation text files
 ```
 
----
-
-## 📸 Suggested Visuals for Blog or Docs
-
-- ✅ `cost_evolution.png`: Visualize cost trend across generations
-- ✅ Simple flowchart diagram of pipeline (e.g., from diagram above)
-- ✅ Screenshots of labeled road damage images or prediction overlays
-
----
-
 ## 💡 Background & Rationale
 
 Many computer vision deployments rely on accuracy or F1 score — but in the real world, *not all mistakes are equal*. A missed road repair (false negative) might cost thousands in damage or liability, while an unnecessary repair (false positive) may simply be wasteful.
