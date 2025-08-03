@@ -20,7 +20,6 @@ Rather than optimizing for **accuracy**, this pipeline focuses on **minimizing r
 
 ## 🔧 Pipeline Diagram
 
-```text
 Images → YOLOv8 → Class Probabilities
         ↓
   Ground Truth Flags (YOLO labels)
