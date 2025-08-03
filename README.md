@@ -81,36 +81,33 @@ The goal is to model real-world deployment as closely as possible, including the
 
 ---
 
-# Add a "How to Run" section to the README.md file
-
-how_to_run = """
----
-
-### 🚀 How to Run
+## 🚀 How to Run
 
 Make sure you have Python 3.9+ and `virtualenv` installed. Then follow these steps:
 
-```bash
-# 1. Clone the repository
+1. Clone the repository
 git clone https://github.com/sigmagensolutions/road-damage-optimizer.git
 cd road-damage-optimizer
 
-# 2. Create and activate a virtual environment
+2. Create and activate a virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\\Scripts\\activate
 
-# 3. Install dependencies
+3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Download the model weights
-# Place the YOLOv8_Small_RDD.pt file into the 'model/' directory
+4. Download the model weights
+Place the YOLOv8_Small_RDD.pt file into the 'model/' directory
 
-# 5. Download the RDD2022 dataset from Kaggle and extract it to 'data/images'
-# You should have image-label pairs in the appropriate structure
+5. Download the RDD2022 dataset from Kaggle and extract it to 'data/images'
+You should have image-label pairs in the appropriate structure
 
-# 6. Run the full pipeline
+6. Run the full pipeline
 python main.py
 
+Note: you'll want to update the costs in the genetic optimizer.py file to suit your situation.
+
+---
 
 ## 🔁 License
 
