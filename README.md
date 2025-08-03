@@ -34,22 +34,22 @@ Optimized Decision Logic (Per-class)
 
 ```
 road_damage_project/
-├── main.py                     # Orchestrates the full pipeline
-├── classify.py                 # Runs inference and outputs class probabilities
-├── build_ground_truth.py       # Parses YOLO labels into per-image flags
-├── evaluate_thresholds.py      # Evaluates cost given thresholds and predictions
-├── genetic_optimizer.py        # Genetic algorithm optimizer
-├── visualize.py                # Plots cost over generations
-├── cost_history.csv            # Cost values across generations
-├── cost_evolution.png          # Visual plot of optimization
-├── inference_results_with_probs.csv  # Image predictions with class probabilities
-├── best_thresholds.json        # Saved optimal thresholds
-├── ground_truth_flags.csv      # Per-image binary flags (ground truth)
+├── main.py                             # Orchestrates the full pipeline
+├── classify.py                         # Runs inference and outputs class probabilities
+├── build_ground_truth.py               # Parses YOLO labels into per-image flags
+├── evaluate_thresholds.py              # Evaluates cost given thresholds and predictions
+├── genetic_optimizer.py                # Genetic algorithm optimizer
+├── visualize.py                        # Plots cost over generations
+├── cost_history.csv                    # Cost values across generations
+├── cost_evolution.png                  # Visual plot of optimization
+├── inference_results_with_probs.csv    # Image predictions with class probabilities
+├── best_thresholds.json                # Saved optimal thresholds
+├── ground_truth_flags.csv              # Per-image binary flags (ground truth)
 ├── model/
-│   └── YOLOv8_Small_RDD.pt     # Fine-tuned model weights from [oracl4 repo](https://github.com/oracl4/RoadDamageDetection)
+│   └── YOLOv8_Small_RDD.pt             # Fine-tuned model weights from [oracl4 repo](https://github.com/oracl4/RoadDamageDetection)
 ├── data/
-│   ├── images/                 # Inference image set
-│   └── labels/                 # YOLO-format annotation text files
+│   ├── images/                         # Inference image set
+│   └── labels/                         # YOLO-format annotation text files
 ```
 
 ## 💡 Background & Rationale
@@ -70,11 +70,10 @@ The goal is to model real-world deployment as closely as possible, including the
 
 - 🔗 Dataset: [RDD2022 Road Damage Dataset](https://www.kaggle.com/datasets/aliabdelmenam/rdd-2022?resource=download)
 - 🧠 Model: Fine-tuned YOLOv8 weights from [oracl4/RoadDamageDetection](https://github.com/oracl4/RoadDamageDetection)
-- 🧪 Optimization logic: Custom-developed genetic algorithm strategy
 
 ---
 
-## 📈 Future Improvements
+## 📈 Potential Future Improvements
 
 - Add real-time feedback integration for retraining
 - Evaluate multiple models or ensembling strategies
@@ -82,6 +81,37 @@ The goal is to model real-world deployment as closely as possible, including the
 
 ---
 
+# Add a "How to Run" section to the README.md file
+
+how_to_run = """
+---
+
+### 🚀 How to Run
+
+Make sure you have Python 3.9+ and `virtualenv` installed. Then follow these steps:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/sigmagensolutions/road-damage-optimizer.git
+cd road-damage-optimizer
+
+# 2. Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\\Scripts\\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Download the model weights
+# Place the YOLOv8_Small_RDD.pt file into the 'model/' directory
+
+# 5. Download the RDD2022 dataset from Kaggle and extract it to 'data/images'
+# You should have image-label pairs in the appropriate structure
+
+# 6. Run the full pipeline
+python main.py
+
+
 ## 🔁 License
 
-MIT License unless otherwise specified.
+MIT License unless otherwise specified. (see credits links for their individual licenses)
