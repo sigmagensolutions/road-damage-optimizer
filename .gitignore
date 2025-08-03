@@ -1,0 +1,25 @@
+# Virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# System/IDE junk
+.DS_Store
+*.log
+
+# Outputs and artifacts
+*.csv
+*.png
+*.json
+
+# Model files
+model/*.pt
+
+# Data
+data/images/
+data/labels/
+data/RDD_SPLIT/
+
+# Jupyter and VS Code
+.ipynb_checkpoints/
+.vscode/

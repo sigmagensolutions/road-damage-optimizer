@@ -1,0 +1,13 @@
+# Path to the root directory containing 'images/' and 'labels/' folders
+path: ./data
+
+# Relative paths from 'path' to training and validation images
+train: images
+val: images
+
+# Class names (from RDD2022: D00 = longitudinal crack, etc.)
+names:
+  0: D00  # Longitudinal Crack
+  1: D10  # Transverse Crack
+  2: D20  # Alligator Crack
+  3: D40  # Pothole
