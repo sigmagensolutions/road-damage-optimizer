@@ -20,7 +20,7 @@ Rather than optimizing for **accuracy**, this pipeline focuses on **minimizing r
 
 ## 🛠️ Pipeline Diagram
 
-```
+
 Images → YOLOv8 → Class Probabilities  
              ↓  
       Ground Truth Flags (YOLO labels)  
@@ -28,7 +28,7 @@ Images → YOLOv8 → Class Probabilities
 Threshold Optimizer (Genetic Algorithm)  
              ↓  
 Optimized Decision Logic (Per-class)
-```
+
 
 ## 📁 Project Structure
 
